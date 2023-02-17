@@ -12,14 +12,14 @@ spec:
   selector:
     matchLabels:
       app: yiwen-capstone2-app
-    template:
-      metadata:
-        labels:
-          app: yiwen-capstone2-app
-      spec:
-        containers:
-          - image: 962804699607.dkr.ecr.us-west-2.amazonaws.com/yiwen-capstone2-ecr_repo:latest
-            imagePullPolicy: Always
-            name: yiwen-capstone2-app
-            ports:
-              - containerPort: 3000
+  template:
+    metadata:
+      labels:
+        app: yiwen-capstone2-app
+    spec:
+      containers:
+        - image: 962804699607.dkr.ecr.us-west-2.amazonaws.com/yiwen-capstone2-ecr_repo:latest
+          imagePullPolicy: Always
+          name: yiwen-capstone2-app
+          ports:
+            - containerPort: 3000
