@@ -1,5 +1,5 @@
 apiVersion: v1
-kind: Service
+kind: Deployment
 metadata:
   labels:
     app.kubernetes.io/name: yiwen-capstone2-app
@@ -19,7 +19,7 @@ spec:
           app: yiwen-capstone2-app
       spec:
         containers:
-          - image:962804699607.dkr.ecr.us-west-2.amazonaws.com/yiwen-capstone2-ecr_repo:latest
+          - image: 962804699607.dkr.ecr.us-west-2.amazonaws.com/yiwen-capstone2-ecr_repo:latest
             imagePullPolicy: Always
             name: yiwen-capstone2-app
             ports:
