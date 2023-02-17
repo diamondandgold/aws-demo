@@ -1,0 +1,26 @@
+apiVersion: v1
+kind: Service
+metadata:
+  labels:
+    app.kubernetes.io/name: yiwen-capstone2-app
+    app.kubernetes.io/instance: yiwen-capstone2-app-instance
+    app.kubernetes.io/version: '1.0.0'
+    app.kubernetes.io/component: backend
+    app.kubernetes.io/managed-by: kubectl
+  name: yiwen-capstone2-app
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: yiwen-capstone2-app
+    template:
+      metadata:
+        labels:
+          app: yiwen-capstone2-app
+      spec:
+        containers:
+          - image:962804699607.dkr.ecr.us-west-2.amazonaws.com/yiwen-capstone2-ecr_repo:latest
+            imagePullPolicy: Always
+            name: yiwen-capstone2-app
+            ports:
+              - containerPort: 3000
