@@ -10,7 +10,7 @@ metadata:
   name: yiwen-capstone2-app
 spec:
   selector:
-    app: group4-app
+    app: yiwen-capstone2-app
   type: NodePort
   ports:
    -  protocol: TCP
