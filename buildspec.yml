@@ -10,10 +10,10 @@ phases:
   build:
     commands:
       - echo build Docker image on `date`
-      - docker build -t trql-ecr-repo .
-      - docker tag trql-ecr-repo:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/trql-ecr-repo:latest
+      - docker build -t yiwen-capstone2-repo01 .
+      - docker tag yiwen-capstone2-repo01:latest 962804699607.dkr.ecr.us-west-2.amazonaws.com/yiwen-capstone2-repo01:latest
   post_build:
     commands:
       - echo build Docker image complete `date`
       - echo push latest Docker images to ECR...
-      - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/trql-ecr-repo:latest
+      - docker push 962804699607.dkr.ecr.us-west-2.amazonaws.com/yiwen-capstone2-repo01:latest
