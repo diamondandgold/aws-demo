@@ -1,13 +1,12 @@
-apiVersion: v1
+apiVersion: apps/v1
 kind: Deployment
 metadata:
   labels:
     app.kubernetes.io/name: yiwen-capstone2-app
     app.kubernetes.io/instance: yiwen-capstone2-app-instance
     app.kubernetes.io/version: '1.0.0'
-    app.kubernetes.io/component: backend
     app.kubernetes.io/managed-by: kubectl
-  name: yiwen-capstone2-app
+  name: yiwen-capstone2-app-deployment
 spec:
   replicas: 1
   selector:
